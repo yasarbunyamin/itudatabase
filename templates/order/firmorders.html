@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Shopping Cart{% endblock %}
+{% block content %}
+    <h1>You are not authorized. Please return </h1>
+
+    <div>
+        <a href="{{ url_for('home') }}"> Return Home</a>
+    </div>
+
+{% endblock %}

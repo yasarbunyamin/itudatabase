@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+{% block content %}
+     <h3> FIRM PROFILE </h3>
+
+
+<p>Firm Name:{{firmname}}</p>
+
+<p>Firm Address:</p>
+  <div>
+    {% for a in address %}
+
+    <p>
+         Street:{{a[1]}}
+         Building  No:{{a[2]}}
+         Apartment No:{{a[3]}}
+         Locality: {{a[4]}}
+         City:    {{a[5]}}
+
+    </p>
+  </div>
+{% endfor %}
+
+<p>Your Product</p>
+<table>
+  <tr>
+    <th>Product</th>
+      <th>--------------</th>
+    <th>Cost</th>
+  </tr>
+    {% for product in products %}
+  <tr>
+    <td>{{product[1]}} </td>
+      <td>--------------</td>
+    <td> {{product[3]}} </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

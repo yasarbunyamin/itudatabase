@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Shopping Cart{% endblock %}
+{% block content %}
+    <h1>Your Cart</h1>
+
+
+<table>
+  <tr>
+    <th>Orders</th>
+      <th>--------------</th>
+    <th>Cost</th>
+  </tr>
+    {% for order in orders %}
+  <tr>
+    <td>{{order[1]}} </td>
+      <td>--------------</td>
+    <td> {{order[3]}} </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<div>
+   <button id="createbutton" class="btn"><a href="{{url_for('order.createOrderEnd')}}">Create Order</a>  </button>
+
+</div>
+
+
+{% endblock %}
